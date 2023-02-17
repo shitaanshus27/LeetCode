@@ -73,7 +73,7 @@ class Solution
     {
         if(B==0)
             {
-            if(!ans.contains(ds))
+            //if(!ans.contains(ds))
                  ans.add(new ArrayList<>(ds));
                 return;
             }
