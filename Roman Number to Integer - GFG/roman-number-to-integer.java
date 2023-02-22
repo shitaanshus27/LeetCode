@@ -46,7 +46,7 @@ class Solution {
                 case 'M': { num=1000;
                             break;}            
         }
-          if(4*num<ans) ans-=num;
+          if(3*num<ans) ans-=num;
           else
              ans+=num;
     }
