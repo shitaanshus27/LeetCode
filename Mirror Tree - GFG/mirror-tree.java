@@ -128,20 +128,12 @@ class Node
 class Solution {
     // Function to convert a binary tree into its mirror tree.
     void mirror(Node root) {
-        if(root==null)
-          return;
-        
-        //mirror(node.right);
-       //System.out.print(node.data+" ");
-        //mirror(node.left);
-        if(root.left!=null)
-           mirror(root.left);
-        
-        if(root.right!=null)
-           mirror(root.right);
-        
-        Node temp=root.left;
-        root.left=root.right;
-        root.right=temp;
+       if(root==null) return;
+      
+      mirror(root.left);
+      mirror(root.right);
+      Node temp=root.left;
+      root.left=root.right;
+      root.right=temp;
     }
 }
