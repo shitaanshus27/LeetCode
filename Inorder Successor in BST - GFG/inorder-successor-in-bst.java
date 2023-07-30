@@ -128,20 +128,20 @@ class Solution
     // returns the inorder successor of the Node x in BST (rooted at 'root')
 	public Node inorderSuccessor(Node root,Node x)
          {
-        Node ans=null;
-       Node cur=root;
-       while(cur!=null)
-       {
-           if(x.data>=cur.data)
-             { 
-               cur=cur.right;
-             }
-           else
+          if(root==null) return null;
+          Node prev=null;
+          while(root!=null)
+          {
+              if(root.data>x.data)
               {
-                ans=cur;
-                cur=cur.left;
+                 prev=root;
+                 root=root.left;
               }
-       }
-     return ans;  
+              else
+              {
+                  root=root.right;
+              }
+          }
+         return prev; 
          }
 }
